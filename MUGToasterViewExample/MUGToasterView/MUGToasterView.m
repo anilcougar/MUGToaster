@@ -102,9 +102,9 @@ NSTimer *mugDurationTimer;
         _subTitleTextColor = [UIColor whiteColor];
         
         _titleFontFamily = @"HelveticaNeue";
-        _subTitleFontFamily = @"HelveticaNeue-UltraLight";
-        _titleFontSize = 20.0f;
-        _subTitleFontSize = 12.0f;
+        _subTitleFontFamily = @"HelveticaNeue";
+        _titleFontSize = 18.0f;
+        _subTitleFontSize = 13.0f;
         _animationType = SlideVertical;
         _animationDuration = 2.0f;
         
