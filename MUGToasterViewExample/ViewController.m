@@ -22,14 +22,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+}
+- (IBAction)showCustomToast:(id)sender {
+    
     _toasterView = [[MUGToasterView alloc] init];
     
-    [_toasterView setTitleTextColor:[UIColor whiteColor]];
+    [_toasterView setSubTitleFont:[UIFont fontWithName:@"Avenir" size:12.0f]];
+    [_toasterView setTitleFont:[UIFont fontWithName:@"Avenir" size:18.0f]];
     [_toasterView setSubTitleTextColor:[UIColor whiteColor]];
+    [_toasterView setTitleTextColor:[UIColor whiteColor]];
+    [_toasterView setToasterHeight:80.f];
     
     [_toasterView showToasterAtView:self.view
                       leftSideImage:[UIImage imageNamed:@"high_priority-50"]
-                    backgroundColor:[UIColor redColor]
+                    backgroundColor:UIColorFromRGB(0xe74c3c)
                           titleText:@"Yout title text here"
                        subTitleText:@"Your subtitle text in here. Hede hodo huhu"
                            duration:5
@@ -41,7 +47,11 @@
                                   NSLog(@"[block]here!");
                               
                           }];
+    
+    
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
